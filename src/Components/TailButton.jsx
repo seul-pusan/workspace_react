@@ -16,13 +16,18 @@ const BTStyle = {
     fuchsia: {
         base : "bg-fuchsia-300",
         hover: "hover:bg-fuchsia-800",
+    },
+
+    slate: {
+        base : "bg-slate-300",
+        hover: "hover:bg-slate-800",
     }
 }
 
 export default function TailButton({color, caption, onHandle}) {
     const btstyle = BTStyle[color];
     return (
-        <button className={`${btstyle.base} text-black rounded-2xl
+        <button className={`${btstyle.base} text-black rounded-2xl bg
                             ${btstyle.hover} hover:text-white hover:font-bold px-4 py-2`}
 
                             onClick= {onHandle}>
