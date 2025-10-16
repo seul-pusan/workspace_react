@@ -12,6 +12,7 @@ export default function MyToggle({ color }) {
                 <MyToggleBox color="blue" />
                 <MyToggleBox color="orange" />
                 <MyToggleBox color="lime" />
+                <MyToggleBox color="fuchsia" />
             </div>
         </div>
     )
