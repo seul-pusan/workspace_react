@@ -13,8 +13,8 @@ export default function FoodCard({ data }) {
     }
 
     return (
-        <div className='w-full h-44 flex justify-start items-start
-                    border border-gray-400 rounded-3xl'>
+        <div className='w-full h-44 flex justify-center items-center
+                    border border-amber-950 mt-3 '>
             <div className='w-1/3 px-5 py-2 flex justify-center'>
                 <img src={
                     data["구분"] == "광역지역센터" ? busan
@@ -25,7 +25,7 @@ export default function FoodCard({ data }) {
                     className="w-6/10 h-1/2" />
             </div>
 
-            <div className='w-2/3 h-full flex flex-col justify-between py-2'>
+            <div className='w-2/3 h-full flex flex-col justify-between py-5 mt-5 mb-3 mr-5'>
                 <div>
                     <h1 className='text-2xl font-bold'>
                         {data['사업장명']}
@@ -38,11 +38,11 @@ export default function FoodCard({ data }) {
                     </p>
                 </div>
 
-                <div className='w-full h-10 bg-purple-400 text-white cursor-pointer'
+                <div className='w-full h-10  bg-yellow-200 text-black cursor-pointer rounded-xl'
                     onClick={handleClick}>
 
                     {isActive &&
-                        <ul className="w-full h-full flex justify-center items-center space-x-6">
+                        <ul className="w-full h-full bg-yellow-400 flex justify-center items-center space-x-6 rounded-xl">
                             <li className="flex">
                                 <BsTelephoneFill className="mr-2 h-full" />{data['연락처(대표번호)']}
                             </li>

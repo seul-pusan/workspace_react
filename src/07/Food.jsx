@@ -21,15 +21,15 @@ export default function Food() {
     }
 
   return (
-    <div className='w-full h-full flex flex-col'>
-        <div>
+    <div className='w-full h-full flex flex-col justify-center items-center p-3 '>
+        <div  className="flex flex-wrap justify-center gap-5 m-4"> 
             {group.map(data =>
             < TailButton key= {data}
                          caption = {data}
-                         color= "fuchsia"
+                         color= "yellow"
                          onHandle = {() => handleClick(data)} />)}
         </div>
-        <div className='8/10 grid grid-cols-1 lg:grid-cols-2 gap-5 overflow-y-hidden'>
+        <div className='4/5 grid grid-cols-1 lg:grid-cols-2 gap-5 overflow-y-hidden'>
             {tags}
         </div>
       
