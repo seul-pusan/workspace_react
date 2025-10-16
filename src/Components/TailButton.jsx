@@ -21,6 +21,11 @@ const BTStyle = {
     slate: {
         base : "bg-slate-300",
         hover: "hover:bg-slate-800",
+    },
+
+    yellow: {
+        base : "bg-yellow-300",
+        hover: "hover:bg-yellow-500",
     }
 }
 
