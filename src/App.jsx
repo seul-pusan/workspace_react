@@ -2,6 +2,7 @@ import './App.css'
 import Header from './05/Header'
 import Footer from './05/Footer'
 import Lotto from './06/Lotto'
+import MyToggle from './05/MyToggle'
 
 function App() {
 
