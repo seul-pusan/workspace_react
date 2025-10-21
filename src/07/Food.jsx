@@ -26,7 +26,7 @@ export default function Food() {
             {group.map(data =>
             < TailButton key= {data}
                          caption = {data}
-                         color= "yellow"
+                         color= "orange"
                          onHandle = {() => handleClick(data)} />)}
         </div>
         <div className='4/5 grid grid-cols-1 lg:grid-cols-2 gap-5 overflow-y-hidden'>
