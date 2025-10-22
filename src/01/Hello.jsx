@@ -1,4 +1,4 @@
-import CurrentTime from "./01/CurrentTime"
+import CurrentTime from "./CurrentTime"
 
 function Hello() {
     let name = "해슬";

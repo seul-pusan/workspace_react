@@ -1,8 +1,7 @@
 import './App.css'
 import Header from './05/Header'
 import Footer from './05/Footer'
-import MyEffect from './08/MyEffect'
-
+import BoxOffice from './09/BoxOffice'
 
 function App() {
 
@@ -10,12 +9,13 @@ function App() {
     //반드시 슬래쉬로 닫아야 함
 
 
-    <div className='w-full h-screen flex flex-col overflow-y-hidden'>
+     <div className='w-full h-screen flex flex-col'>
       <Header />
-      <main className='container mx-auto flex flex-col flex-grow overflow-y-auto'>
-        <MyEffect />
-      </main>
-      <Footer />
+      <main className='container mx-auto flex flex-col justify-center'>
+        <BoxOffice />
+     </main>
+    
+     
     </div>
 
 
