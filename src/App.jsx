@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './05/Header'
 import Footer from './05/Footer'
-import BoxOffice from './09/BoxOffice'
+import Traffic from './10/Traffic'
 
 function App() {
 
@@ -11,8 +11,8 @@ function App() {
 
      <div className='w-full h-screen flex flex-col'>
       <Header />
-      <main className='container mx-auto flex flex-col justify-center'>
-        <BoxOffice />
+      <main className='bg-sal'>
+        <Traffic />
      </main>
     
      
