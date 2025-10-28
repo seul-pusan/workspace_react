@@ -22,8 +22,15 @@ export default function Traffic() {
     const [info, setInfo] = useState([]);
     const [infoTag, setInfoTag] = useState();
 
-    const getFetchData = () => {
-        setTdata(trafficdata);
+    const getFetchData = async () => {
+        const apikey = import.meta.env.VITE_DATA_API;
+        const baseUrl = 'https://api.odcloud.kr/api/15070282/v1/uddi:8449c5d7-8be5-4712-9093-968fc0b2d9fc?'
+        const url = `${baseUrl}page=1&perPage=117&serviceKey=${apikey}`;
+
+        const resp = await fetch(url);
+        const data = await resp.json();
+
+        setTdata(data.data);
     };
 
     useEffect(() => {
@@ -59,17 +66,9 @@ export default function Traffic() {
         if (!sel1) return;
 
         //사고유형 목록 생성
-        let tm = [...new Set(
-            tdata.filter(item => item['사고유형 대분류'] == sel1)
-                .map(item => item['사고유형']))];
-
-        //사고유형 생성
+        let tm = tdata.filter(item => item["사고유형대분류"] == sel1)
+            .map(item => item['사고유형']);
         setC2(tm);
-        //새로 선택 시 사고유형 초기화
-        setSel2("");
-        //이전 정보도 초기화
-        setInfo([]);
-        //초기화
         setInfoTag('');
     }, [sel1]);
     //
@@ -81,29 +80,31 @@ export default function Traffic() {
 
         //사고유형 목록 생성
         let tm = tdata.filter(item => item['사고유형 대분류'] == sel1 && item['사고유형'] == sel2);
-        setInfo(tm);
+        setInfo(tm[0]);
     }, [sel2]);
 
     //사고 유형 결정되면
     useEffect(() => {
-        if (!info || info.length === 0) return;
+        if (!info) return;
+
         console.log("info", info)
-
-        const information = info.map((x, y) => (
-            <div key={y}
-                className="w-full flex items-center justify-center gap-2 p-3">
-                <div className="bg-indigo-200 text-black px-4 py-2 rounded-sm  w-28 text-center font-semibold">
-                    {x['연도'].replace('[', '').replace(']', '')}
+        let information = ["사고건수", "사망자수", "중상자수", "경상자수", "부상신고자수"];
+        information = information.map(item => (
+            <div
+                key={item}
+                className="flex text-lg p-2 mx-2 border border-indigo-300 
+                   rounded-lg bg-indigo-50 hover:bg-indigo-100 
+                   shadow-sm transition-all duration-300"
+            >
+                <div className="bg-indigo-500 text-white px-4 py-2 w-32 text-center font-semibold rounded-l-lg">
+                    {item}
                 </div>
-                <div className="text-gray-800  font-semibold w-16 text-center">
-                    {x['인원'].toLocaleString()}
+                <div className="text-indigo-800 px-4 py-2 w-32 text-center font-bold">
+                    {info[item] ? parseInt(info[item]).toLocaleString() : "-"}
                 </div>
-
             </div>
-        ))
-
+        ));
         setInfoTag(information);
-
     }, [info]);
 
 
