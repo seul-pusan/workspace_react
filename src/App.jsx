@@ -19,6 +19,7 @@ import Gallery from './13/Gallery';
 import Festival from './14/Festival';
 import FestivalContents from './14/FestivalContents';
 import RouteMain from './15/RouteMain';
+import ChargeInfo
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
