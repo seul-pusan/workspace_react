@@ -41,7 +41,7 @@ export default function Lotto() {
       </div>
 
       <div className='mt-20'>
-        <TailButton caption="로또번호생성" color="fuchsia" onHandle={handelClick} />
+        <TailButton caption="로또번호생성" color="slate" onHandle={handelClick} />
       </div>
     </div>
   )

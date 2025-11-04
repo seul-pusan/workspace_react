@@ -4,7 +4,7 @@ import MyClockTime from './MyClockTime'
 
 export default function MyClock() {
     return (
-        <div className='w-full flex flex-col justify-center items-center'>
+        <div className='w-full flex flex-col justify-center items-center '>
             <MyClockImage />
             <MyClockTime />
         </div>
