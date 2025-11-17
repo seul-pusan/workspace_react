@@ -64,8 +64,8 @@ export default function Subway() {
         <div className="w-11/12 md:w-3/4 max-w-4xl mx-auto flex flex-col justify-start items-center mt-12">
 
             {/* 헤더 + Select */}
-            <div className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 p-7 rounded-2xl shadow-lg mb-8">
-                <h1 className="text-2xl md:text-3xl font-extrabold text-white text-center tracking-wide drop-shadow-md">
+            <div className="w-full bg-violet-300 p-7 rounded-2xl shadow-lg mb-8">
+                <h1 className="text-2xl md:text-3xl font-extrabold text-black text-center tracking-wide drop-shadow-md">
                     부산 실내공기질 정보
                 </h1>
 
@@ -93,7 +93,7 @@ export default function Subway() {
                 {selectedArea ? (
                     <SubwayData area={selectedArea} />
                 ) : (
-                    <div className="w-full text-center p-6 text-slate-500 bg-slate-100 rounded-xl shadow-inner">
+                    <div className="w-full text-center p-6 text-slate-700 bg-slate-100 rounded-xl shadow-inner">
                         지역을 선택해주세요.
                     </div>
                 )}
