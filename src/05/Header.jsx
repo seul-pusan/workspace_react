@@ -84,6 +84,37 @@ const Header = () => {
               🐬
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/charger"
+              className={({ isActive }) =>
+                `${baseStyle} ${isActive ? activeStyle : inactiveStyle}`
+              }
+            >
+              ⚡
+            </NavLink>
+          </li>
+           {/* <li>
+            <NavLink
+              to="/jotai"
+              className={({ isActive }) =>
+                `${baseStyle} ${isActive ? activeStyle : inactiveStyle}`
+              }
+            >
+              jotai
+            </NavLink>
+          </li>              */}
+          <li>
+            <NavLink
+              to="/todolist"
+              className={({ isActive }) =>
+                `${baseStyle} ${isActive ? activeStyle : inactiveStyle}`
+              }
+            >
+              📝
+            </NavLink>
+          </li>
+
         </ul>
       </nav>
     </header>

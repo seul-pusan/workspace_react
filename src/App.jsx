@@ -19,8 +19,11 @@ import Gallery from './13/Gallery';
 import Festival from './14/Festival';
 import FestivalContents from './14/FestivalContents';
 import RouteMain from './15/RouteMain';
-import ChargeInfo
+import ChargerInfo from './16/ChargerInfo'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import JotaiCnt from './17/JotaiCnt'
+import TodoList from './18_1/TodoList'
+
 
 function App() {
 
@@ -40,6 +43,10 @@ function App() {
             <Route path='/gallery' element={<Gallery />} />
             <Route path='/festival' element={<Festival />} />
             <Route path="/festival/contents" element={<FestivalContents />} />
+            <Route path='/charger' element={<ChargerInfo />} />
+            <Route path='/charger' element={<ChargerInfo />} />
+            {/* <Route path='/jotai' element={<JotaiCnt />} /> */}
+            <Route path='/todolist' element={<TodoList />} />
           </Routes>
         </main>
         {/* <div>
