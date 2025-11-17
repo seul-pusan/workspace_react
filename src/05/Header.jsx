@@ -114,6 +114,17 @@ const Header = () => {
               📝
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/subway"
+              className={({ isActive }) =>
+                `${baseStyle} ${isActive ? activeStyle : inactiveStyle}`
+              }
+            >
+              🚆
+            </NavLink>
+          </li>
+          
 
         </ul>
       </nav>

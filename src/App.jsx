@@ -23,7 +23,7 @@ import ChargerInfo from './16/ChargerInfo'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import JotaiCnt from './17/JotaiCnt'
 import TodoList from './18_1/TodoList'
-
+import Subway from './19/subway'
 
 function App() {
 
@@ -47,6 +47,7 @@ function App() {
             <Route path='/charger' element={<ChargerInfo />} />
             {/* <Route path='/jotai' element={<JotaiCnt />} /> */}
             <Route path='/todolist' element={<TodoList />} />
+            <Route path='/subway' element={<Subway />} /> 
           </Routes>
         </main>
         {/* <div>
