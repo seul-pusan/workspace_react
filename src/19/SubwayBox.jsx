@@ -3,11 +3,11 @@ import scode from "./scode.json";
 export default function SubwayBox({ idx, item }) {
   const isOdd = idx === 1;
 
-  // 컬러 테마 (idx에 따라 깔끔한 lime 또는 amber)
-  const headerBg = isOdd ? "bg-amber-700" : "bg-lime-700";
-  const headerText = isOdd ? "text-amber-800" : "text-lime-800";
-  const valueBorder = isOdd ? "border-amber-600" : "border-lime-600";
-  const valueTitleBg = isOdd ? "bg-amber-700" : "bg-lime-700";
+  // 컬러 테마 (idx에 따라 깔끔한 lime 또는 orange)
+  const headerBg = isOdd ? "bg-orange-700" : "bg-lime-700";
+  const headerText = isOdd ? "text-orange-800" : "text-lime-800";
+  const valueBorder = isOdd ? "border-orange-600" : "border-lime-600";
+  const valueTitleBg = isOdd ? "bg-orange-700" : "bg-lime-700";
 
   return (
     <div className="w-full flex flex-col justify-start my-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">

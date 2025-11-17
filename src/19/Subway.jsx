@@ -1,13 +1,13 @@
 import sarea from "./sarea.json";
 import SubwayBox from "./SubwayBox";
-import TailSelect from "../components/TailSelect";
+import TailSelect from "../Components/TailSelect";
 import { useState, useRef, use, Suspense } from "react";
 
 const dataCache = new Map();
 
 function fetchData(area) {
     const dt = new Date().toISOString().slice(0, 10).replaceAll('-', '');
-    const apikey = import.meta.env.VITE_API_KEY;
+    const apikey = import.meta.env.VITE_DATA_API;
     const baseUrl = "/api/6260000/IndoorAirQuality/getIndoorAirQualityByStation?";
     let url = `${baseUrl}serviceKey=${apikey}&pageNo=1&numOfRows=50`;
     url = `${url}&resultType=json&controlnumber=${dt}&areaIndex=${area}`;
@@ -61,7 +61,7 @@ export default function Subway() {
     };
 
     return (
-        <div className="w-11/12 md:w-3/4 max-w-4xl mx-auto flex flex-col justify-start items-center mt-12">
+        <div className="w-11/12 md:w-3/4 max-w-4xl mx-auto flex flex-col justify-start items-center mt-40 min-h-screen">
 
             {/* 헤더 + Select */}
             <div className="w-full bg-violet-300 p-7 rounded-2xl shadow-lg mb-8">
@@ -72,7 +72,7 @@ export default function Subway() {
                 <div className="mt-5">
                     <TailSelect
                         id="selArea"
-                        ref={selAreaRef}
+                        selRef={selAreaRef}
                         title="부산 지하철역 선택"
                         opk={sarea.map(item => item["코드"])}
                         opv={sarea.map(item => item["측정소"])}
